@@ -1,0 +1,24 @@
+{
+  "name": "create-vite-vue3-hbzz",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "create-vite-vue3-hbzz": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "4",
+    "commander": "^9.4.0",
+    "cross-spawn": "^7.0.3",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.1.0",
+    "inquirer": "8",
+    "ora": "5"
+  }
+}

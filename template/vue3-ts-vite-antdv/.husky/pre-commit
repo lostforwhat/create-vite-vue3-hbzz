@@ -1,0 +1,24 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+[ -n "$CI" ] && exit 0
+
+if [ "$(uname)" == "Darwin" ]; then
+echo "Mac OS X 操作系统"
+npm run lint-mac
+
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then   
+echo "GNU/Linux操作系统"
+npm run lint-linux
+
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then    
+echo "Windows NT操作系统"
+npm run lint-win
+
+else
+echo "使用默认配置"
+npm run lint
+fi
+
+npm run prettier
